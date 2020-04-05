@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="table">
+        <table>
+            <tr>
+             <th>Name</th>
+             <th>Surname</th>
+             <th>Email</th>
+             <th>Date</th>
+            </tr>
+            <tr>
+             <td>Anton</td>
+             <td>Semenishin</td>
+             <td>anton_semenishin@gmail.com</td>
+             <td>01.03.2020</td>
+             <td><input type="checkbox"></td>
+           </tr>
+          </table>
+    </div>
+    <div class='table-buttons'>
+      <input type="button" value="Delete rows" onclick="deleteRows();">
+      <input type="button" value="Edit" onclick="editData(id);">
+    </div>
+    <div class="form">
+        <form>
+            <fieldset>
+              <legend>Add new data</legend>
+              <p><label>Name </label><input type="text" id="name"></p>
+              <p><label>Surname </label><input type="text" id="surname"></p>
+              <p><label>Email </label><input type="e-mail" id="email"></p>
+              <span class="wrong-email">Please, wright correct e-mail</span>
+              <span class="error-message">Please, fill all fields!</span>
+              <p><input type="button" value="Accept" onclick="addField();"></p>
+            </fieldset>
+          </form>
+    </div>
+    <div class="edit-form">
+      <form>
+          <fieldset>
+            <legend>Edit data</legend>
+            <p><label>Name </label><input type="text" id="edit-name"></p>
+            <p><label>Surname </label><input type="text" id="edit-surname"></p>
+            <p><label>Email </label><input type="e-mail" id="edit-email"></p>
+            <p><label>Date </label><input type="text" id="edit-date"></p>
+            <span class="wrong-edit-email">Please, wright correct e-mail</span>
+            <span class="error-edit-message">Please, fill all fields!</span>
+            <p><input type="button" value="Accept" onclick="acceptEditData();"></p>
+          </fieldset>
+        </form>
+  </div>
+</body>
+<script src="index.js"></script>
+</html>
